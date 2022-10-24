@@ -1,0 +1,383 @@
+{
+    "account": "Micro",
+    "username": "西湖畔的许仙",
+    "admin": true,
+    "token": null,
+    "apis": null,
+    "roleCodes": [
+        "SystemManager",
+        "AdminUser",
+        "MarketingManageme",
+        "test"
+    ],
+    "permissions": [
+        "/",
+        "/system",
+        "/system/user",
+        "/system/role",
+        "/system/resource",
+        "/system/perm",
+        "/system/dict",
+        "/cms",
+        "/cms/sites",
+        "/cms/sites/site-list",
+        "/cms/sites/site-recycle",
+        "/cms/channel",
+        "/cms/channel/channel-list",
+        "/cms/channel/channel-recycle",
+        "/cms/article",
+        "/cms/article/article-list",
+        "/cms/article/article-recycle",
+        "/cms/template",
+        "/cms/template/template-list",
+        "/cms/template/template-import",
+        "/cms/cms-settings",
+        "/cms/cms-settings/article-source",
+        "/cms/cms-settings/hotword",
+        "/cms/cms-settings/sensitive",
+        "/cms/cms-settings/category",
+        "/system/user/org",
+        "/cms/template/template-add",
+        "/cms/sites/filexplorer/:id",
+        "/cms/cms-settings/imgHouse",
+        "/cms/cms-settings/imgRecycle",
+        "/cms/cms-settings/resourcesMage"
+    ],
+    "menuCodes": [
+        "index",
+        "system",
+        "user",
+        "role",
+        "resource",
+        "perm",
+        "dict",
+        "cms",
+        "sites",
+        "sites:list",
+        "recycle",
+        "channel",
+        "channel:list",
+        "channel:recycle",
+        "article",
+        "article-list",
+        "article:recycle",
+        "template",
+        "template:list",
+        "template:import",
+        "cms:settings",
+        "article:source",
+        "hot:words",
+        "sensitive:word",
+        "category",
+        "img:house",
+        "img:recycle"
+    ],
+    "buttonCodes": [
+        "dict-edit",
+        "dict-del",
+        "role-edit",
+        "resource-del",
+        "user-role",
+        "user-add",
+        "role-add",
+        "role-perm",
+        "role-del",
+        "perm-del",
+        "resource-add",
+        "user-del",
+        "dict-add",
+        "perm-edit",
+        "user-edit",
+        "user-repwd",
+        "resource-edit",
+        "perm-add"
+    ],
+    "roles": [
+        {
+            "name": "系统管理员",
+            "code": "SystemManager"
+        },
+        {
+            "name": "用户管理员",
+            "code": "AdminUser"
+        },
+        {
+            "name": "市场营销",
+            "code": "MarketingManageme"
+        },
+        {
+            "name": "测试角色",
+            "code": "test"
+        }
+    ],
+    "menus": [
+        {
+            "code": "index",
+            "pcode": null,
+            "children": [],
+            "name": "主页",
+            "url": "/",
+            "icon": "el-icon-house",
+            "sort": 1
+        },
+        {
+            "code": "system",
+            "pcode": null,
+            "children": [
+                {
+                    "code": "user",
+                    "pcode": "system",
+                    "children": [],
+                    "name": "用户管理",
+                    "url": "user",
+                    "icon": "el-icon-user",
+                    "sort": 1
+                },
+                {
+                    "code": "role",
+                    "pcode": "system",
+                    "children": [],
+                    "name": "角色管理",
+                    "url": "role",
+                    "icon": "el-icon-key",
+                    "sort": 2
+                },
+                {
+                    "code": "resource",
+                    "pcode": "system",
+                    "children": [],
+                    "name": "资源管理",
+                    "url": "resource",
+                    "icon": "el-icon-notebook-2",
+                    "sort": 3
+                },
+                {
+                    "code": "perm",
+                    "pcode": "system",
+                    "children": [],
+                    "name": "权限管理",
+                    "url": "perm",
+                    "icon": "el-icon-cpu",
+                    "sort": 4
+                },
+                {
+                    "code": "dict",
+                    "pcode": "system",
+                    "children": [],
+                    "name": "数据字典",
+                    "url": "dict",
+                    "icon": "el-icon-files",
+                    "sort": 5
+                }
+            ],
+            "name": "系统管理",
+            "url": "system",
+            "icon": "el-icon-setting",
+            "sort": 2
+        },
+        {
+            "code": "cms",
+            "pcode": null,
+            "children": [
+                {
+                    "code": "sites",
+                    "pcode": "cms",
+                    "children": [
+                        {
+                            "code": "sites:list",
+                            "pcode": "sites",
+                            "children": null,
+                            "name": "站点维护",
+                            "url": "site-list",
+                            "icon": "",
+                            "sort": 1
+                        },
+                        {
+                            "code": "recycle",
+                            "pcode": "sites",
+                            "children": null,
+                            "name": "回收站管理",
+                            "url": "site-recycle",
+                            "icon": "",
+                            "sort": 2
+                        }
+                    ],
+                    "name": "站点管理",
+                    "url": "sites",
+                    "icon": "",
+                    "sort": 1
+                },
+                {
+                    "code": "channel",
+                    "pcode": "cms",
+                    "children": [
+                        {
+                            "code": "channel:list",
+                            "pcode": "channel",
+                            "children": null,
+                            "name": "频道维护",
+                            "url": "channel-list",
+                            "icon": "",
+                            "sort": 1
+                        },
+                        {
+                            "code": "channel:recycle",
+                            "pcode": "channel",
+                            "children": null,
+                            "name": "频道回收站",
+                            "url": "channel-recycle",
+                            "icon": "",
+                            "sort": 2
+                        }
+                    ],
+                    "name": "频道管理",
+                    "url": "channel",
+                    "icon": "",
+                    "sort": 2
+                },
+                {
+                    "code": "article",
+                    "pcode": "cms",
+                    "children": [
+                        {
+                            "code": "article-list",
+                            "pcode": "article",
+                            "children": null,
+                            "name": "文章列表",
+                            "url": "article-list",
+                            "icon": null,
+                            "sort": 1
+                        },
+                        {
+                            "code": "article:recycle",
+                            "pcode": "article",
+                            "children": null,
+                            "name": "文章回收站",
+                            "url": "article-recycle",
+                            "icon": "",
+                            "sort": 2
+                        }
+                    ],
+                    "name": "文章管理",
+                    "url": "article",
+                    "icon": null,
+                    "sort": 3
+                },
+                {
+                    "code": "template",
+                    "pcode": "cms",
+                    "children": [
+                        {
+                            "code": "template:list",
+                            "pcode": "template",
+                            "children": null,
+                            "name": "模板维护",
+                            "url": "template-list",
+                            "icon": "",
+                            "sort": 1
+                        },
+                        {
+                            "code": "template:import",
+                            "pcode": "template",
+                            "children": null,
+                            "name": "导入模板",
+                            "url": "template-import",
+                            "icon": "",
+                            "sort": 2
+                        }
+                    ],
+                    "name": "模板管理",
+                    "url": "template",
+                    "icon": "",
+                    "sort": 4
+                },
+                {
+                    "code": "cms:settings",
+                    "pcode": "cms",
+                    "children": [
+                        {
+                            "code": "article:source",
+                            "pcode": "cms:settings",
+                            "children": null,
+                            "name": "文章来源配置",
+                            "url": "article-source",
+                            "icon": "",
+                            "sort": 1
+                        },
+                        {
+                            "code": "hot:words",
+                            "pcode": "cms:settings",
+                            "children": null,
+                            "name": "热词管理",
+                            "url": "hotword",
+                            "icon": null,
+                            "sort": 2
+                        },
+                        {
+                            "code": "sensitive:word",
+                            "pcode": "cms:settings",
+                            "children": null,
+                            "name": "敏感词管理",
+                            "url": "sensitive",
+                            "icon": null,
+                            "sort": 3
+                        },
+                        {
+                            "code": "category",
+                            "pcode": "cms:settings",
+                            "children": null,
+                            "name": "分类管理",
+                            "url": "category",
+                            "icon": null,
+                            "sort": 4
+                        },
+                        {
+                            "code": "worksheet",
+                            "pcode": "cms:settings",
+                            "children": null,
+                            "name": "自定义表单",
+                            "url": "worksheet",
+                            "icon": null,
+                            "sort": 5
+                        },
+                        {
+                            "code": "img:house",
+                            "pcode": "cms:settings",
+                            "children": null,
+                            "name": "图片库",
+                            "url": "imgHouse",
+                            "icon": null,
+                            "sort": 6
+                        },
+                        {
+                            "code": "img:recycle",
+                            "pcode": "cms:settings",
+                            "children": null,
+                            "name": "图片库回收站",
+                            "url": "imgRecycle",
+                            "icon": null,
+                            "sort": 7
+                        },
+                        {
+                            "code": "resources:mage",
+                            "pcode": "cms:settings",
+                            "children": null,
+                            "name": "资源管理",
+                            "url": "resourcesMage",
+                            "icon": null,
+                            "sort": 8
+                        }
+                    ],
+                    "name": "CMS配置",
+                    "url": "cms-settings",
+                    "icon": "",
+                    "sort": 5
+                }
+            ],
+            "name": "CMS系统",
+            "url": "cms",
+            "icon": "el-icon-s-grid",
+            "sort": 5
+        }
+    ]
+}

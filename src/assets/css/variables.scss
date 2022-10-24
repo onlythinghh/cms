@@ -1,0 +1,58 @@
+// base color
+$blue:#324157;
+$light-blue:#3A71A8;
+$red:#C03639;
+$pink: #E65D6E;
+$green: #30B08F;
+$tiffany: #4AB7BD;
+$yellow:#FEC171;
+$panGreen: #30B08F;
+$dark: #545c64;
+$top:#eaf1f9;
+$homeTitle:#193f6c;
+// sidebar
+$menuText:#FFF;
+$menuActiveText:#FFF;
+$subMenuActiveText:#f4f4f5; // https://github.com/ElemeFE/element/issues/12951
+
+$menuBg:#304156;
+$menuHover:#2e9cd1;
+
+// $subMenuBg:#1f2d3d;
+$subMenuBg:#4d6f95;
+// $subMenuHover:#001528;
+$subMenuHover:#718caa;
+$sideBarWidth: 210px;
+$sideBarCollapsedWidth: 64px;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+}
+
+$nopadding: 0 !important;
+$bg-dark: #545c64;
+$text-color: #fff;
+$active-text-color: #ffd04b;
+
+// border
+$border-color: #DCDFE6;
+$border-radius: 5px;
+
+// 多行文字显示省略号
+@mixin ellipsisMultiline($number: 1) {
+  display: -webkit-box;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $number;
+}

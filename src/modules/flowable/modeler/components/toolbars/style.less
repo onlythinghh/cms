@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?vkqlht');
+    src: url('fonts/icomoon.eot?vkqlht#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?vkqlht') format('truetype'),
+        url('fonts/icomoon.woff?vkqlht') format('woff'),
+        url('fonts/icomoon.svg?vkqlht#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+// [class^="icon-"],
+// [class*=" icon-"] {
+//     /* use !important to prevent issues with browser extensions that change fonts */
+//     font-family: 'icomoon' !important;
+//     speak: none;
+//     font-style: normal;
+//     font-weight: normal;
+//     font-variant: normal;
+//     text-transform: none;
+//     line-height: 1;
+
+//     /* Better Font Rendering =========== */
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+// }
+
+.icon-image:before {
+    content: "\e90d";
+}
+
+.icon-folder-open:before {
+    content: "\e930";
+}
+
+.icon-box-add:before {
+    content: "\e95e";
+}
+
+.icon-floppy-disk:before {
+    content: "\e962";
+}
+
+.icon-undo2:before {
+    content: "\e967";
+}
+
+.icon-redo2:before {
+    content: "\e968";
+}
+
+.icon-search:before {
+    content: "\e986";
+}
+
+.icon-zoom-in:before {
+    content: "\e987";
+}
+
+.icon-zoom-out:before {
+    content: "\e988";
+}
+
+.icon-plus:before {
+    content: "\ea0a";
+}
+
+.io-toolbars {
+    position: absolute;
+    left: 120px;
+    top: 20px;
+    z-index: 10;
+}
+
+.io-import-export {
+    position: relative;
+
+}
+
+/* .io-help,
+.io-legal,
+.io-import-export {
+    bottom: 60px;
+} */
+
+.io-import-export .inactive {
+    opacity: 0.3;
+}
+
+.io-control {
+    background: #FFF;
+    border-radius: 2px;
+    border: solid 1px #E0E0E0;
+    padding: 5px;
+}
+
+.io-control-list {
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+    background: #fafafa;
+}
+
+.io-import {
+    margin-right: 10px;
+}
+
+.io-control-list a,
+.io-control-list a:visited,
+.io-control-list button {
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 24px;
+    // line-height: 26px;
+    color: #777777;
+    background: none;
+    border: none;
+}
+
+.io-control-list a:hover,
+.io-control-list a:visited:hover,
+.io-control-list button:hover {
+    color: #333333;
+}
+
+.io-control-list a.inactive,
+.io-control-list a:visited.inactive,
+.io-control-list button.inactive {
+    color: #E0E0E0;
+    cursor: default;
+}
+
+.io-control-list.io-horizontal,
+.io-control-list.io-horizontal li {
+    display: inline-block;
+    position: relative;
+}
+
+.io-control-list.io-horizontal li.line:after {
+    content: '';
+    position: absolute;
+    // top: 50%;
+    top: 0;
+    right: -1px;
+    // transform: translateY(-50%);
+    height: 100%;
+    border-right: 1px solid #ddd
+}
+
+.io-control-list.io-horizontal a {
+    padding: 2px;
+    margin: 0 5px;
+}
+
+.io-control-list.io-horizontal a,
+.io-control-list.io-horizontal button {
+    vertical-align: bottom;
+}
+
+.io-control-list.io-horizontal button {
+    margin: 0 5px;
+}
+
+.io-control hr {
+    border: none;
+    border-top: solid 1px #EEE;
+}
+
+.io-editing-tools .io-control {
+    margin-left: 10px;
+}
+
+.io-editing-tools .io-control button {
+    margin: 0;
+}
+
+.io-control-list.io-horizontal,
+.io-control-list.io-horizontal li {
+    display: inline-block;
+    position: relative;
+}
+
+.io-import-load-bpmn .open-file {
+    display: none
+}
