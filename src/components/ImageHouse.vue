@@ -81,13 +81,13 @@
             ref="imgChild"
             :list="list"
             :limit="limit"
-            :dataCount="dataCount"
+            :data-count="dataCount"
             @handleChange="handleChange"
             @sizeChange="sizeChange"
             @currentChange="currentChange"
         ></imgList>
         <div slot="footer" class="dialog-footer">
-            <el-button  type="primary" @click="comfim">确认</el-button>
+            <el-button type="primary" @click="comfim">确认</el-button>
             <el-button @click="handelClose">取消</el-button>
         </div>
     </el-dialog>
@@ -97,6 +97,15 @@ import { mapActions } from "vuex";
 import imgList from './imgList.vue'
 export default {
     name: 'ImageHouse',
+    components:{
+        imgList
+    },
+    props:{
+        visible: {
+            type: Boolean,
+            default: false
+        },
+    },
     data() {
         return {
             isShowLead: false,
@@ -123,15 +132,6 @@ export default {
             currList: [],
             currlistIds: []
         }
-    },
-    props:{
-        visible: {
-            type: Boolean,
-            default: false
-        },
-    },
-    components:{
-        imgList
     },
     methods:{
         ...mapActions('cms/settings/imgHouse', ['getImgList', 'getImgSign']),

@@ -47,9 +47,9 @@ const actions = {
         return Request.post(reqData.url, {...reqData.data}).then(res => {
             return Promise.resolve(res.data);
         })
-        .catch(err => {
-            return Promise.reject(err);
-        });
+            .catch(err => {
+                return Promise.reject(err);
+            });
     },
     ajaxJson({ commit }, reqData) {
         return Request.post(reqData.url, {...reqData.data},{

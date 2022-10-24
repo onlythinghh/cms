@@ -23,13 +23,13 @@
                     </el-row>
                 </el-form>
             </template>
-            <el-table :data="keyWordList" ref="tableList">
+            <el-table ref="tableList" :data="keyWordList">
                 <el-table-column label="序号" width="55">
                     <template slot-scope="scope"> {{scope.$index+1}} </template>
                 </el-table-column>
                 <el-table-column label="创建时间" prop="keyWord"></el-table-column>
                 <el-table-column label="操作">
-                    <template  v-slot="{ row }">
+                    <template v-slot="{ row }">
                         <el-button type="text" @click="setKeyWord(row)">配置</el-button>
                     </template>
                 </el-table-column>
@@ -44,7 +44,7 @@
                 @size-change="sizeChange"
                 @current-change="currentChange"
             ></el-pagination>
-    </div>
+    </tablerow></div>
 </template>
 <script>
 export default {

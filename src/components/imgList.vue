@@ -1,12 +1,12 @@
 <template>
     <div class="img_list">
         <el-checkbox-group v-model="checkList" @change="CheckedChange">
-            <div class="list_item" v-if="list.length > 0">
+            <div v-if="list.length > 0" class="list_item">
                 <div v-for="(item, index) in list" :key="index" class="item">
                     <el-checkbox :label="item.id" class="check_box">
                     <div class="top_box">
                         <div class="item_img">
-                            <img class="img" v-if="item.pathPart" :src="item.pathPart" alt="cex">
+                            <img v-if="item.pathPart" class="img" :src="item.pathPart" alt="cex">
                             <div v-else class="image_slot">
                                 <i class="el-icon-picture-outline icon_size"></i>
                             </div>
@@ -24,24 +24,30 @@
                     </el-checkbox>
                 </div>
             </div>
-            <div class="list_item" v-else>
+            <div v-else class="list_item">
                 <el-empty class="empty_data" :image-size="200"></el-empty>
             </div>
         </el-checkbox-group>
         <el-pagination
             v-if="dataCount > 10"
-            @size-change="sizeChange"
-            @current-change="currentChange"
             :page-sizes="[12, 24, 48, 96]"
             :page-size="limit"
             :total="dataCount"
-            layout="total, sizes, prev, pager, next">
+            layout="total, sizes, prev, pager, next"
+            @size-change="sizeChange"
+            @current-change="currentChange"
+>
         </el-pagination>
     </div>
 </template>
 <script>
 export default {
     name: 'ImgList',
+    filters:{
+        filnull(name) {
+            return name == '' || name == null ? '--' : name
+        }
+    },
     props: {
         list: {
             type: Array,
@@ -82,11 +88,6 @@ export default {
         // 分页
         currentChange(v) {
             this.$emit('currentChange', v)
-        }
-    },
-    filters:{
-        filnull(name) {
-            return name == '' || name == null ? '--' : name
         }
     }
 }

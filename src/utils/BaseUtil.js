@@ -275,7 +275,7 @@ export const openLink = (url, target = '_blank') => {
  */
 export const queryUrlString = (name) => {
     return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.href) || [, ""])[1].replace(/\+/g, '%20')) || null
-  }
+}
 
 export const formatDecimal = (str, num=20) => {//str当前输入值，num是想要保留的小数位数
     str = String(str)
@@ -296,7 +296,7 @@ export const formatDecimal = (str, num=20) => {//str当前输入值，num是想�
     if (str.indexOf('.') !== -1) {
         let str_ = str.substr(str.indexOf('.') + 1)
         if (str_.indexOf('.') !== -1) {
-        str = str.substr(0, str.indexOf('.') + str_.indexOf('.') + 1)
+            str = str.substr(0, str.indexOf('.') + str_.indexOf('.') + 1)
         }
     }
     // 正则替换

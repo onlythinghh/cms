@@ -511,8 +511,8 @@
                 <ul class="device_list">
                     <li 
                         v-for="item in previewList"
-                        :key="item.key" @click="currActive = item.key"
-                        :class="['list_item',{'actives':currActive==item.key}]"
+                        :key="item.key" :class="['list_item',{'actives':currActive==item.key}]"
+                        @click="currActive = item.key"
                     >
                         <div :class="['hzicon', item.icon]"></div>
                         <p class="txt">{{item.name}}</p>
@@ -521,10 +521,10 @@
             </div>
             <div slot="footer" class="dialog-footer">
                 <el-button @click="checkPreviewClose">取 消</el-button>
-                <el-button type="primary" @click="commonPrev" style="margin-left:10px">确 定</el-button>
+                <el-button type="primary" style="margin-left:10px" @click="commonPrev">确 定</el-button>
             </div>
         </el-dialog>
-        <mobileMoadel :mobileVisible="ylShow" :mediaType="currActive" :url="ylUrl" @closed="mobileClose"></mobileMoadel>
+        <mobileMoadel :mobile-visible="ylShow" :media-type="currActive" :url="ylUrl" @closed="mobileClose"></mobileMoadel>
         </div>
         <div class="Table">
             <el-button type="primary" :disabled="!passSow" @click="batchAdopt">批量审核通过</el-button>
@@ -750,7 +750,7 @@ export default {
     mounted(){
         window.onresize = () => {
             return (() => {
-            this.setDialogWidth()
+                this.setDialogWidth()
             })()
         }
     },
@@ -797,7 +797,7 @@ export default {
             this.iframeState = false
         },
         iconByType (row) {
-        return row.origin.substring(row.origin.lastIndexOf('.') + 1, row.origin.length)
+            return row.origin.substring(row.origin.lastIndexOf('.') + 1, row.origin.length)
         },
         previewHandler(data) {
             console.log('data',data)

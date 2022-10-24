@@ -28,9 +28,9 @@
             <!-- <component :is="iscomponent" :currentProduct="currentProduct" :dataList="currentData" @getProductDetails="getProductDetails"></component> -->
             <component
                 :is="iscomponent"
-                :currentProduct="currentProduct"
-                :dataList="currentData"
-                :prdVisible2="prdVisible2"
+                :current-product="currentProduct"
+                :data-list="currentData"
+                :prd-visible2="prdVisible2"
                 @seaveProduct="seaveProduct"
                 @deleteReateRow="deleteReateRow"
                 @getProductDetails="getProductDetails"

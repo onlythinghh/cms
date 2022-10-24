@@ -233,7 +233,7 @@
                     <el-table-column prop="operationDate" label="操作时间" align="center" />
                     <el-table-column label="附件内容" align="center">
                         <template slot-scope="scope">
-                            <el-button v-if="scope.row.attachList.length>0" @click="lookUP(scope)" type="text" size="mini">查看</el-button>
+                            <el-button v-if="scope.row.attachList.length>0" type="text" size="mini" @click="lookUP(scope)">查看</el-button>
                         </template>
                     </el-table-column>
                     <el-table-column prop="auditRemark" label="审批备注" align="center" />
@@ -721,8 +721,8 @@ export default {
                         reviewerName: null
                     }
                 }
-               this.proSave.nodeList.push(obj)
-               console.log('this.proSave.nodeList',this.proSave.nodeList)
+                this.proSave.nodeList.push(obj)
+                console.log('this.proSave.nodeList',this.proSave.nodeList)
             });
         },
         async getUserName() {

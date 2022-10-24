@@ -3,11 +3,11 @@
         <!-- <el-skeleton :rows="7" animated />
         <el-skeleton :rows="7" animated /> -->
         <!-- 备份 -->
-        <div class="loading" v-if="isLoading">
+        <div v-if="isLoading" class="loading">
             <p><span class="el-icon-loading"></span></p>
             <p>登录验证中</p>
         </div>
-        <div class="error" v-else>
+        <div v-else class="error">
             <img
                 style="width:45%"
                 src="../../assets/images/forbidden.png"
@@ -40,25 +40,25 @@ export default {
         getLogin() {
             let t = queryUrlString('t')
             this.simpleLogin({ ticket: t })
-                    .then((indexRoute) => {
-                        console.log(indexRoute)
-                        // showLoading(false)
-                        if(!indexRoute){
-                            this.isLoading = false
-                            // indexRoute = '/'
-                            
-                        }
-                        this.isLoading = true
-                        this.$router.push({path: indexRoute})
-                        sessionStorage.setItem('LastLog',true)
-                        
-                    })
-                    .catch(error => {
+                .then((indexRoute) => {
+                    console.log(indexRoute)
+                    // showLoading(false)
+                    if(!indexRoute){
                         this.isLoading = false
-                        this.loadVerCodeURL()
-                        // showLoading(false);
-                        // showMessage({ message: error.message || '登录失败', type: "error" });
-                    });
+                        // indexRoute = '/'
+                            
+                    }
+                    this.isLoading = true
+                    this.$router.push({path: indexRoute})
+                    sessionStorage.setItem('LastLog',true)
+                        
+                })
+                .catch(error => {
+                    this.isLoading = false
+                    this.loadVerCodeURL()
+                    // showLoading(false);
+                    // showMessage({ message: error.message || '登录失败', type: "error" });
+                });
         }
     }
 }

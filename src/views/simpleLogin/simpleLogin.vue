@@ -101,7 +101,7 @@ import { showLoading, showMessage } from "../../utils";
 import { enableI18n } from '../../setting'
 import { session } from '../../utils/WebStore'
 export default {
-    name: "simpLogin",
+    name: "SimpLogin",
     data() {
         return {
             enableI18n,

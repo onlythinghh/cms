@@ -405,8 +405,8 @@
                 <ul class="device_list">
                     <li 
                         v-for="item in previewList"
-                        :key="item.key" @click="currActive = item.key"
-                        :class="['list_item',{'actives':currActive==item.key}]"
+                        :key="item.key" :class="['list_item',{'actives':currActive==item.key}]"
+                        @click="currActive = item.key"
                     >
                         <div :class="['hzicon', item.icon]"></div>
                         <p class="txt">{{item.name}}</p>
@@ -415,10 +415,10 @@
             </div>
             <div slot="footer" class="dialog-footer">
                 <el-button @click="checkPreviewClose">取 消</el-button>
-                <el-button type="primary" @click="commonPrev" style="margin-left:10px">确 定</el-button>
+                <el-button type="primary" style="margin-left:10px" @click="commonPrev">确 定</el-button>
             </div>
         </el-dialog>
-    <mobileMoadel :mobileVisible="ylShow" :mediaType="currActive" :url="ylUrl" @closed="moboelClosed"></mobileMoadel>
+    <mobileMoadel :mobile-visible="ylShow" :media-type="currActive" :url="ylUrl" @closed="moboelClosed"></mobileMoadel>
     
     </div>
 </template>

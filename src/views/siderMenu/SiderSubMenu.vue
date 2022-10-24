@@ -43,7 +43,7 @@ export default {
         }
     },
     methods:{
-         ...mapActions('system/log',['addLog']),
+        ...mapActions('system/log',['addLog']),
         async clickMenu(data){
             let res = await this.addLog({
                 value:data.name

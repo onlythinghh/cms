@@ -52,7 +52,7 @@
             <div class="tab_bar">
                 <resourcesList
                     ref="resListRef"
-                    :searchInfo="searchInfo"
+                    :search-info="searchInfo"
                     @changeItems="changeItems"
                     @selectionChange="handleSelectionChange"
                 ></resourcesList>
@@ -169,9 +169,9 @@ export default {
                 console.log('sts:',isLoad)
                 if(!isLoad) {
                     this.$confirm('删除资源中包含已发布的数据，确认删除吗？', '提示', {
-                    confirmButtonText: '确定',
-                    cancelButtonText: '取消',
-                    type: 'warning'
+                        confirmButtonText: '确定',
+                        cancelButtonText: '取消',
+                        type: 'warning'
                     }).then(() => {
                         this.deleteResources()
                     }).catch(() => {});

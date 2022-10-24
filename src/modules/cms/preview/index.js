@@ -82,7 +82,7 @@ export const previewChannel = (channelId = '', target) => {
  * @param {*} channelId 频道ID
  * @param {*} target  同 a 标签target
  */
- export const previewMobileChannel = (channelId = '', target) => {
+export const previewMobileChannel = (channelId = '', target) => {
     return loadPreviewURL(CHANNEL_PREVIEW_URL, { id: channelId }).then(link => {
         if(link){
             return Promise.resolve({ success: true, link: link })
@@ -131,7 +131,7 @@ export const previewCustom = (channelId = '',formId = '', dataId = '', target) =
  * @param {*} channlelName 频道名称
  * @param {*} parentId 父频道id
  */
- export const NewPreviewCustom = (data) => {  
+export const NewPreviewCustom = (data) => {  
     let { channelId = '',formId = '', dataId = '', target, channlelName='', parentId='' } = data
     loadPreviewURL(CUSTOM_PREVIEW_URL, { channelId, dataId,formId }).then(link => {
         if(link){
@@ -152,7 +152,7 @@ export const previewCustom = (channelId = '',formId = '', dataId = '', target) =
  * @param {*} dataId 文章Id
  * @param {*} target   同 a 标签target
  */
- export const previewCustomMobile = (channelId = '',formId = '', dataId = '') => {
+export const previewCustomMobile = (channelId = '',formId = '', dataId = '') => {
     return loadPreviewURL(CUSTOM_PREVIEW_URL, { channelId, dataId,formId }).then(link => {
         if(link){
             return Promise.resolve({ success: true, link: link })

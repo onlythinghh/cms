@@ -52,7 +52,7 @@
             title="操作记录"
             width="60%"
         >
-            <el-table :data="logList" ref="logList" class="logList">
+            <el-table ref="logList" :data="logList" class="logList">
                 <el-table-column label="操作人" prop="updateUser"></el-table-column>
                 <el-table-column label="操作时间" prop="upateTime">
                     <template v-slot="{ row }">{{ row.upateTime | dateFormat }}</template>
@@ -222,14 +222,14 @@ export default {
             let seriesArr = [] // 数据线
             let legendArr = []
             // list.forEach(item => {
-                let obj = {
-                    name: list.action,
-                    type: 'line',
-                    stack: 'Total',
-                    data: list.count
-                }
-                seriesArr.push(obj)
-                legendArr.push(list.action)
+            let obj = {
+                name: list.action,
+                type: 'line',
+                stack: 'Total',
+                data: list.count
+            }
+            seriesArr.push(obj)
+            legendArr.push(list.action)
             // })
             console.log('渲染表格数据',seriesArr)
             let { freq } = this.sharchInfo

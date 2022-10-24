@@ -252,15 +252,15 @@ export default {
             
         }
     },
-    created() {
-        this.queryTableList()
-    },
     watch:{
         deployVisible(newVal) {
             if(newVal) {
                 this.getchannel()
             }
         }
+    },
+    created() {
+        this.queryTableList()
     },
     methods: {
         ...mapActions('cms/dataform',[

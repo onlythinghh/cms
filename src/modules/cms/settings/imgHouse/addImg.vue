@@ -93,7 +93,7 @@ export default {
     methods:{
         ...mapActions('cms/settings/imgHouse', ['uploadImghouse','imageSave']),
         // handleChange(file, fileList){
-            // console.log('修改文档流', file)
+        // console.log('修改文档流', file)
         // },
         _uploadLogo({ file, onError, onSuccess }){
             // console.log('file1111',file)

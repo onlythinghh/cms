@@ -144,7 +144,7 @@ export default {
                 const source = { id: null, name: '', url: '', desc: '', ...this.source }
                 showLoading(true, '正在保存')
                 this.saveSource(source).then(res => {
-                     if(res.success){
+                    if(res.success){
                         showMessage(res.errMsg)
                         this.needReload = true
                         this._cancel()

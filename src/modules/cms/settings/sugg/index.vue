@@ -31,7 +31,7 @@
                             <el-button size="medium" @click="resetForm">重置</el-button>
                         </el-form-item>
                         <el-form-item label-width="100px">
-                            <el-button @click="feedbackDel(null)" type="danger">删除</el-button>
+                            <el-button type="danger" @click="feedbackDel(null)">删除</el-button>
                             <el-button type="primary" @click="batchAdoptclick">导出</el-button>
                         </el-form-item>
                     </el-col>
@@ -41,7 +41,7 @@
         <div>
             <el-dialog title="反馈内容" :visible.sync="addVisible" width="50%" center @close="addVisible = false">
                 <div>
-                    <el-input type="textarea" rows="10" show-word-limit maxlength="500" cols="100" v-model="content"/>
+                    <el-input v-model="content" type="textarea" rows="10" show-word-limit maxlength="500" cols="100"/>
                 </div>
             </el-dialog>
         </div>
@@ -60,7 +60,7 @@
             >
                 <el-table-column type="selection" width="50" />
                 <el-table-column label="序号" width="60" type="index" align="center" />
-                <el-table-column prop="phone" label="手机号码" align="center"  width="200"/>
+                <el-table-column prop="phone" label="手机号码" align="center" width="200"/>
                 <el-table-column label="建议日期" align="center" width="200">
                     <template v-slot="{row}">
                         <span>{{row.time|dateFormat}}</span>

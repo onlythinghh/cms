@@ -188,8 +188,8 @@ export default {
     methods: {
         ...mapActions(
             'cms/article/articleList',['releaseArticle','customArticle',
-            'getReviewer','auditPublish','directPublish', 'getChanneldata', 'uploaderSave'
-        ]),
+                'getReviewer','auditPublish','directPublish', 'getChanneldata', 'uploaderSave'
+            ]),
         ...mapActions('authen', ['getReviewerList']),
         async init(){
             const data = await this.getReviewer({})

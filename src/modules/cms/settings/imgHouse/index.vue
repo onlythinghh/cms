@@ -80,7 +80,7 @@
                 ref="imgChild"
                 :list="dataList"
                 :limit="limit"
-                :dataCount="dataCount"
+                :data-count="dataCount"
                 @handleChange="handleChange"
                 @sizeChange="sizeChange"
                 @currentChange="currentChange"

@@ -25,7 +25,7 @@
                 <el-button type="primary" @click="itemEdit(null, 0)">新建</el-button>
             </template>
         </TableRow>
-        <el-table :data="layerList" class="tableList" ref="tableList">
+        <el-table ref="tableList" :data="layerList" class="tableList">
             <el-table-column label="实验层名称" prop="name">
                 <template v-slot="{ row }">
                     <div class="tab_cont">
@@ -222,7 +222,7 @@ export default {
                 id: row.id
             }
             this.getlayerdDelete(params).then(res => {
-            console.log('删除',res)
+                console.log('删除',res)
                 if(res.success){
                     this.$message.success(res.data)
                     this.queryTableList()
